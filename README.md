@@ -1,33 +1,31 @@
 # Prompt Enhancer
 
-[English](README.en.md)
+Prompt Enhancer is a Codex skill that turns vague or evolving requests into self-contained task prompts that an AI or collaborator can carry out and verify.
 
-Prompt Enhancer 是用于优化 AI 任务提示词的 Codex 技能。它把模糊或跨多轮的需求整理成一份可以独立交给 AI 执行、也方便核对结果的任务说明。
+## When to use it
 
-## 适用场景
+- You have a goal and need to use the current project state to define the scope of changes and how to verify them.
+- The request has changed over several turns, and you need to identify which decisions still apply, which have been replaced, and which trade-offs are still open.
+- You want to rewrite a request as a prompt another AI or collaborator can act on.
 
-- 用户给出了目标，需要结合项目现状确定改动范围和验收方法。
-- 需求经过多轮调整，需要核对哪些决定仍生效、哪些已经替换，以及哪些取舍有待确认。
-- 需要把现有需求改写成一份可交给其他 AI 或协作者执行的提示词。
+## Output format
 
-## 输出格式
+1. **Task objective**. Describe the context, current state, and desired outcome.
+2. **Specific tasks**. Identify what to work on, the scope, the steps, and their dependencies.
+3. **Acceptance criteria**. Explain how to verify the result and what counts as a pass.
+4. **Deliverables**. List the expected outputs, formats, and verification records.
 
-1. **任务目标**。说明背景、现状和要达成的结果。
-2. **具体任务**。明确操作对象、范围、执行步骤和依赖。
-3. **验收标准**。写清如何验证和什么条件算通过。
-4. **交付内容**。列出应交付的产物、格式和验证记录。
+The skill uses verifiable project material to fill in context and distinguishes user requirements, confirmed facts, and suggestions. If you request prompt refinement, it produces the revised prompt. If you explicitly authorize execution, work can continue through implementation and verification.
 
-技能会依据可核实的项目资料补充必要上下文，区分用户要求、已核实事实和建议。只要求优化提示词时，交付提示词正文。用户明确授权执行时，工作可继续推进到实施和验证。
+## Example
 
-## 使用示例
-
-在已安装该技能的 Codex 中输入：
+In Codex with the skill installed, enter:
 
 ```text
-$prompt-enhancer 把“优化地图加载流程”整理成任务提示词。
-请先核对现有加载入口，明确修改范围和验收方法，只生成提示词。
+$prompt-enhancer Turn “improve map loading” into a task prompt.
+Inspect the current loading entry point first, then define the scope of changes and how to verify them. Generate the prompt only.
 ```
 
-## 仓库状态
+## Repository status
 
-本仓库目前提供项目说明。使用示例需要在本机已安装 Prompt Enhancer 技能的环境中运行。
+This repository currently provides the project documentation. The example requires Prompt Enhancer to be installed in your local Codex environment.
