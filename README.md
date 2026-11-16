@@ -1,5 +1,7 @@
 # Prompt Enhancer
 
+[English](README.en.md)
+
 Prompt Enhancer 是用于优化 AI 任务提示词的 Codex 技能。它把模糊或跨多轮的需求整理成一份可以独立交给 AI 执行、也方便核对结果的任务说明。
 
 ## 适用场景
